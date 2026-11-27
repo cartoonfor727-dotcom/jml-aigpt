@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.M.L. AIGPT</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #101522;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px;
+  background: #192338;
+  border-bottom: 1px solid #34415a;
+}
+h1 { margin: 0; color: #65d6a2; }
+header p { color: #aab5c9; }
+main {
+  max-width: 700px;
+  margin: 35px auto;
+  padding: 20px;
+}
+.panel {
+  background: #192338;
+  border: 1px solid #34415a;
+  border-radius: 16px;
+  padding: 22px;
+}
+h2 { color: #65d6a2; }
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 9px;
+  border: 1px solid #53617a;
+  background: #101522;
+  color: white;
+  font-size: 16px;
+}
+button {
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #20a66b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#answer {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #dce6f5;
+}
+footer {
+  text-align: center;
+  color: #8995aa;
+  padding: 25px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>J.M.L. AIGPT</h1>
+  <p>My Personal AI Workspace</p>
+</header>
+<main>
+  <div class="panel">
+    <h2>Welcome to J.M.L. AIGPT</h2>
+    <p>Your personal AI workspace starts here.</p>
+    <h3>AI Chat Interface</h3>
+    <textarea id="question" rows="4"
+      placeholder="Ask something..."></textarea>
+    <button onclick="askAI()">Send Message</button>
+    <div id="answer">Your response will appear here.</div>
+  </div>
+</main>
+<footer>Built with passion by J.M.L.</footer>
+<script>
+function askAI() {
+  const question = document.getElementById("question").value.trim();
+  const answer = document.getElementById("answer");
+  if (!question) {
+    answer.textContent = "Please enter a question.";
+    return;
+  }
+  answer.textContent =
+    "Welcome to J.M.L. AIGPT! Your question was received:\n\n" +
+    question +
+    "\n\nAI connection is not yet configured. The next development step is connecting an AI model.";
+}
+</script>
+</body>
+</html>
